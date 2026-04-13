@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+{% block title %}{{ title }} • Shubham Gour Tech{% endblock %}
+{% block content %}
+  <section class="playlist-hero" style="--hero-gradient: {{ gradient }};">
+    <h1>{{ title }}</h1>
+    <p>Watch the full playlist here without leaving the site.</p>
+  </section>
+
+  <section class="player-wrap">
+    <div class="player">
+      <iframe 
+        src="https://www.youtube.com/embed/videoseries?list={{ list_id }}"
+        title="{{ title }}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="player-actions">
+      <a class="btn" href="/">← Back to Home</a>
+      <a class="btn yt" href="{{ CHANNEL_URL }}" target="_blank" rel="noopener">Subscribe</a>
+    </div>
+  </section>
+{% endblock %}

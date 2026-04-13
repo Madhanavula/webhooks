@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Shubham Gour Tech{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <header class="nav">
+    <div class="brand">
+      <span class="logo">SG</span>
+      <a class="brand-text" href="/">Shubham Gour Tech</a>
+    </div>
+    <nav class="nav-actions">
+      <a class="btn yt" href="{{ CHANNEL_URL }}" target="_blank" rel="noopener">Subscribe</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <p>© {{ 2025 }} Shubham Gour — Built with Flask • <a href="{{ CHANNEL_URL }}" target="_blank">YouTube</a></p>
+  </footer>
+</body>
+</html>
