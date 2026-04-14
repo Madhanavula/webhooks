@@ -1,4 +1,4 @@
-# checking with sccm
+# initiall checking for webhooks
 FROM python:3.11-slim
 WORKDIR /app
 COPY requirements.txt ./
